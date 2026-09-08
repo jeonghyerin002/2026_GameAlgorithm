@@ -42,11 +42,11 @@ public sealed class WarehouseData : MonoBehaviour , IWarehouseData
     }
     public ForkliftBox DequeueIncoming()
     {
-        if (outgoingQueue.Count == 0)
+        if (incomingQueue.Count == 0)
         {
             return null;
         }
-        return outgoingQueue.Dequeue();
+        return incomingQueue.Dequeue();
     }
     public ForkliftBox[] GetIncomingItems()
     {
